@@ -75,8 +75,10 @@ class _SelectRoomWidgetState extends State<SelectRoomWidget> {
                             child: Container(
                               width: 30,
                               height: 30,
-                              child: Image.asset(
-                                  "assets/images/selected.png"),
+                              child: _selectedIndex == index ? Image.asset(
+                                  "assets/images/selected.png") :
+                              Image.asset(
+                                  "assets/images/unselected.png"),
                             ),
                           ),
 
@@ -150,12 +152,6 @@ class _SelectRoomWidgetState extends State<SelectRoomWidget> {
                 // showErrorSnackBar("message");
                 setState(() {
                   _selectedIndex = index;
-                  // for(int i = 0; i <  itemsRoomsTypes.length; i++) {
-                  //     setState(() {
-                  //       itemsRoomsTypes[i].selected = false;
-                  //     });
-                  // }
-                  // itemsRoomsTypes[index].selected = true;
                 });
 
 
