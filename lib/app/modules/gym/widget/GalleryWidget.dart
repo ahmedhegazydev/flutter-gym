@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/utils/ColorExtensions.dart';
 import '../controllers/GymController.dart';
@@ -26,41 +27,51 @@ class _GalleryWidgetState extends State<GalleryWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Stack(children: [
       Padding(
         padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
         child: Row(
           children: [
             Text(
               "Gallery",
-              style: TextStyle(
+              // style: TextStyle(
+              //     color: Colors.black,
+              //     fontSize: 20,
+              //     fontWeight: FontWeight.w700),
+                style: GoogleFonts.nunitoSans(
                   color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500),
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700
+                )
             ),
             Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: Text("view more",
-                  style: TextStyle(
-                      color: HexColor.fromHex("#F2540A"),
-                      fontSize: 15,
-                      fontWeight: FontWeight.w300)),
+                  // style: TextStyle(
+                  //     color: HexColor.fromHex("#F2540A"),
+                  //     fontSize: 15,
+                  //     fontWeight: FontWeight.w300),
+                  style: GoogleFonts.nunitoSans(
+                    color: HexColor.fromHex("#F2540A"),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w300
+                  )
+              ),
             )
           ],
         ),
       ),
-
       Container(
-          padding: const EdgeInsets.only(left: 10, top: 0, right: 10),
+          padding: const EdgeInsets.only(left: 10, top: 25, right: 10),
           width: double.infinity,
-          height: 400,
+          height: 500,
           child :
           MasonryGridView.count(
             physics: NeverScrollableScrollPhysics(),
             crossAxisCount: 2,
             mainAxisSpacing: 10,
-            crossAxisSpacing: 5,
+            crossAxisSpacing: 10,
             // semanticChildCount: 0,
             itemCount: GymController.to.galleryItems.length,
             itemBuilder: (context,index){
@@ -68,9 +79,9 @@ class _GalleryWidgetState extends State<GalleryWidget> {
               return  Container(
                 height: _height.toDouble(),
                 child: Padding(
-                  padding:  EdgeInsets.all(8.0),
+                  padding:  EdgeInsets.all(0),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(8),
                     child: SizedBox.fromSize(
                       size: const Size.fromRadius(48),
                       child: Image.asset(

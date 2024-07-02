@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_template/app/modules/events_and_capms/controllers/EventsCampsController.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 
 import '../../../core/utils/ColorExtensions.dart';
@@ -49,7 +50,7 @@ class _SelectRoomWidgetState extends State<SelectRoomWidget> {
                 child: Padding(
                   padding: EdgeInsets.all(0),
                   child: Container(
-                      padding: const EdgeInsets.all(17),
+                      padding: const EdgeInsets.only(left: 5, right: 10, top: 15, bottom: 15),
                       // alignment: Alignment.topLeft,
                       // width: 300,
                       decoration: BoxDecoration(
@@ -71,7 +72,7 @@ class _SelectRoomWidgetState extends State<SelectRoomWidget> {
                           //   },
                           // ),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(5),
                             child: Container(
                               width: 30,
                               height: 30,
@@ -88,23 +89,30 @@ class _SelectRoomWidgetState extends State<SelectRoomWidget> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 8.0, bottom: 20),
-                                // child: Text(EventsCampsController.to.itemsRoomsTypes[index].roomType,
                                 child: Text(itemsRoomsTypes[index].roomType,
                                     maxLines: 4, overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      // color: Colors.white,
+                                    // style: TextStyle(
+                                    //     fontSize: 23,
+                                    //     fontWeight: FontWeight.w700),
+                                    style: GoogleFonts.nunitoSans(
                                         fontSize: 23,
-                                        fontWeight: FontWeight.w500)),
+                                        fontWeight: FontWeight.w800
+                                    )
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 8.0),
                                 // child: Text(EventsCampsController.to.itemsRoomsTypes[index].offerDesc,
                                 child: Text(itemsRoomsTypes[index].offerDesc,
                                     maxLines: 4, overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      // color: Colors.white,
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w400)),
+                                    // style: TextStyle(
+                                    //     fontSize: 10,
+                                    //     fontWeight: FontWeight.w400),
+                                    style: GoogleFonts.nunitoSans(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400
+                                    )
+                                ),
                               ),
                             ],
 
@@ -115,23 +123,31 @@ class _SelectRoomWidgetState extends State<SelectRoomWidget> {
                             child: Row(children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 8.0),
-                                // child: Text(EventsCampsController.to.itemsRoomsTypes[index].price,
                                 child: Text(itemsRoomsTypes[index].price,
                                     maxLines: 4, overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      // color: Colors.white,
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w600)),
+                                    // style: TextStyle(
+                                    //   // color: Colors.white,
+                                    //     fontSize: 25,
+                                    //     fontWeight: FontWeight.w600),
+                                    style: GoogleFonts.nunitoSans(
+                                      fontSize: 25,
+                                          fontWeight: FontWeight.w800
+                                    )
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 8.0),
                                 // child: Text(EventsCampsController.to.itemsRoomsTypes[index].unit,
                                 child: Text(itemsRoomsTypes[index].unit,
                                     maxLines: 4, overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      // color: Colors.white,
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w400)),
+                                    // style: TextStyle(
+                                    //     fontSize: 10,
+                                    //     fontWeight: FontWeight.w400),
+                                    style: GoogleFonts.nunitoSans(
+                                      fontSize: 10,
+                                          fontWeight: FontWeight.w400
+                                    )
+                                ),
                               ),
                             ],),
                           )

@@ -70,6 +70,7 @@ abstract class BaseView<Controller extends BaseController>
 
   Widget pageContent(BuildContext context) {
     return SafeArea(
+        top: false,
       child: body(context),
     );
   }

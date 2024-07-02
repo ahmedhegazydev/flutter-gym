@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/utils/ColorExtensions.dart';
 
@@ -66,11 +67,15 @@ class _OrangeRoundedButtonState extends State<OrangeRoundedButton> {
                   widget.callback!()
                   // Get.toNamed(Routes.GYM);
                 }) : TextButton(
-                child: const Text(
+                child:  Text(
                   // "New Member".toUpperCase(),
                     "New Member",
-                    style: TextStyle(
-                        fontSize: 17, fontWeight: FontWeight.w500)),
+                    // style: TextStyle(
+                    //     fontSize: 17, fontWeight: FontWeight.w500),
+                    style: GoogleFonts.nunitoSans(
+                        fontSize: 17, fontWeight: FontWeight.w500
+                    )
+                ),
                 style: ButtonStyle(
                     padding: MaterialStateProperty.all<EdgeInsets>(
                         const EdgeInsets.all(15)),

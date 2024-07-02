@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 import 'package:flutter_getx_template/app/modules/events_and_capms/controllers/EventsCampsController.dart';
 import '../../../core/utils/ColorExtensions.dart';
@@ -32,17 +33,28 @@ class _ReviewsWidgetState extends State<ReviewsWidget> {
             children: [
               Text(
                 "Reviews",
-                style: TextStyle(
+                // style: TextStyle(
+                //     color: Colors.black,
+                //     fontSize: 20,
+                //     fontWeight: FontWeight.w700),
+                  style: GoogleFonts.nunitoSans(
                     color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700
+                  )
               ),
               Spacer(),
               Text("view more",
-                  style: TextStyle(
+                  // style: TextStyle(
+                  //     color: HexColor.fromHex("#F2540A"),
+                  //     fontSize: 15,
+                  //     fontWeight: FontWeight.w300),
+                  style: GoogleFonts.nunitoSans(
                       color: HexColor.fromHex("#F2540A"),
                       fontSize: 15,
-                      fontWeight: FontWeight.w300))
+                      fontWeight: FontWeight.w300
+                  )
+              )
             ],
           ),
         ),
@@ -51,7 +63,7 @@ class _ReviewsWidgetState extends State<ReviewsWidget> {
           // color: Colors.grey,
           width: double.infinity,
           // width: 250,
-          height: 150,
+          height: 160,
           // alignment: Alignment.center,
           child: ScrollSnapList(
             // child: ListView.builder(
@@ -85,17 +97,21 @@ class _ReviewsWidgetState extends State<ReviewsWidget> {
                         // crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           CircleAvatar(
-                            radius: 30,
+                            radius: 25,
                             backgroundImage: AssetImage(
                                 EventsCampsController.to.itemsReviews[index].imagePath),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 8, right: 8),
                             child: Text(EventsCampsController.to.itemsReviews[index].userName,
-                                style: TextStyle(
-                                  // color: Colors.white,
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500)),
+                                // style: TextStyle(
+                                //     fontSize: 17,
+                                //     fontWeight: FontWeight.w700),
+                                style: GoogleFonts.nunitoSans(
+                                  fontSize: 17,
+                                      fontWeight: FontWeight.w700
+                                )
+                            ),
                           ),
                           Container(
                             padding: const EdgeInsets.only(top: 5, bottom: 5),
@@ -110,28 +126,42 @@ class _ReviewsWidgetState extends State<ReviewsWidget> {
                             child: Padding(
                               padding: const EdgeInsets.only(right: 5, left: 5),
                               child: Text(EventsCampsController.to.itemsReviews[index].rating,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w500)),
+                                  // style: TextStyle(
+                                  //     color: Colors.white,
+                                  //     fontSize: 12,
+                                  //     fontWeight: FontWeight.w700),
+                                  style: GoogleFonts.nunitoSans(
+                                    color: Colors.white,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w700
+                                  )
+                              ),
                             ),
                           ),
                           Spacer(),
                           Text(EventsCampsController.to.itemsReviews[index].date,
-                              style: TextStyle(
-                                // color: Colors.white,
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w400)),
+                              // style: TextStyle(
+                              //     fontSize: 10,
+                              //     fontWeight: FontWeight.w400),
+                              style: GoogleFonts.nunitoSans(
+                                fontSize: 10,
+                                    fontWeight: FontWeight.w400
+                              )
+                          ),
                         ],
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 10, left: 8, right: 8),
                         child: Text(EventsCampsController.to.itemsReviews[index].desc,
                             maxLines: 4, overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              // color: Colors.white,
-                                fontSize: 10,
-                                fontWeight: FontWeight.w400)),
+                            // style: TextStyle(
+                            //     fontSize: 10,
+                            //     fontWeight: FontWeight.w400),
+                            style: GoogleFonts.nunitoSans(
+                              fontSize: 10,
+                                  fontWeight: FontWeight.w400
+                            )
+                        ),
                       ),
                     ],
                   ),

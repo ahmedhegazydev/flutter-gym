@@ -5,6 +5,7 @@ import 'package:flutter_getx_template/app/core/utils/ColorExtensions.dart';
 import 'package:flutter_getx_template/app/modules/create_membership/controllers/CreateMemberShip_controller.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:readmore/readmore.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 import 'package:video_player/video_player.dart';
@@ -80,7 +81,7 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                     // ),
                     ButterFlyAssetVideo(),
                     Padding(
-                      padding: EdgeInsets.only(top: 10),
+                      padding: EdgeInsets.only(top: 0),
                       child: CustomAppBar(
                         appBarTitleText: 'Events',
                         titleColor: Colors.white,
@@ -89,21 +90,32 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                         },
                       ),
                     ),
-                    Image.asset("assets/images/play.png"),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 40),
+                      child: Image.asset("assets/images/play.png"),
+                    ),
                   ],
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 10, left: 10, right: 10),
                 child: Row(
-                  children: const [
+                  children:  [
                     Text("Day Name",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500)),
+                        // style: TextStyle(
+                        //     fontSize: 18, fontWeight: FontWeight.w700),
+                        style: GoogleFonts.nunitoSans(
+                            fontSize: 18, fontWeight: FontWeight.w700,)
+                    ),
                     Spacer(),
                     Text("20/12/2022",
-                        style: TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.w400)),
+                        // style: TextStyle(
+                        //     fontSize: 17, fontWeight: FontWeight.w400),
+                        style: GoogleFonts.nunitoSans(fontSize: 17, fontWeight: FontWeight.w500,
+                        color: HexColor.fromHex("1C1C1E")
+                        )
+
+                    ),
                   ],
                 ),
               ),
@@ -112,50 +124,80 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                 child: Row(
                   children: [
                     Row(
-                      children: const [
+                      children:  [
                         Text("FRI",
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w400)),
+                            // style: TextStyle(
+                            //     fontSize: 15, fontWeight: FontWeight.w400),
+                            style: GoogleFonts.nunitoSans( fontSize: 15, fontWeight: FontWeight.w400)
+                        ),
                         Padding(
                           padding: EdgeInsets.only(left: 4, right: 4),
                           child: Text("10",
-                              style: TextStyle(
-                                  color: Colors.orange,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400)),
+                              // style: TextStyle(
+                              //     color: Colors.orange,
+                              //     fontSize: 15,
+                              //     fontWeight: FontWeight.w400),
+                              style: GoogleFonts.nunitoSans(
+                                color: Colors.orange,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400
+                              )
+                          ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 4),
                           child: Text("Feb",
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w400)),
+                              // style: TextStyle(
+                              //     fontSize: 12, fontWeight: FontWeight.w400),
+                              style: GoogleFonts.nunitoSans(
+                                  fontSize: 12, fontWeight: FontWeight.w400
+                              )
+                          ),
                         ),
                       ],
                     ),
-                    const Padding(
+                     Padding(
                       padding: EdgeInsets.only(left: 4, right: 4),
                       child: Text("_",
-                          style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w400)),
+                          // style: TextStyle(
+                          //     fontSize: 12, fontWeight: FontWeight.w400),
+                          style: GoogleFonts.nunitoSans(
+                              fontSize: 12, fontWeight: FontWeight.w400
+                          )
+                      ),
                     ),
                     Row(
-                      children: const [
+                      children:  [
                         Text("TUE",
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w400)),
+                            // style: TextStyle(
+                            //     fontSize: 15, fontWeight: FontWeight.w400),
+                            style: GoogleFonts.nunitoSans(
+                                fontSize: 15, fontWeight: FontWeight.w400
+                            )
+                        ),
                         Padding(
                           padding: EdgeInsets.only(left: 4, right: 4),
                           child: Text("14",
-                              style: TextStyle(
+                              // style: TextStyle(
+                              //     color: Colors.orange,
+                              //     fontSize: 15,
+                              //     fontWeight: FontWeight.w400),
+                              style: GoogleFonts.nunitoSans(
                                   color: Colors.orange,
                                   fontSize: 15,
-                                  fontWeight: FontWeight.w400)),
+                                  fontWeight: FontWeight.w400
+                              )
+                          ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 4),
                           child: Text("Feb",
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w400)),
+                              // style: TextStyle(
+                              //     fontSize: 12, fontWeight: FontWeight.w400),
+                              style: GoogleFonts.nunitoSans(
+                                  fontSize: 12, fontWeight: FontWeight.w400
+                              )
+                          ),
                         ),
                       ],
                     ),
@@ -166,9 +208,13 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                         const SizedBox(
                           width: 5,
                         ),
-                        const Text("Sahra benan sf hotel",
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w400)),
+                         Text("Sahra benan sf hotel",
+                            // style: TextStyle(
+                            //     fontSize: 15, fontWeight: FontWeight.w400),
+                            style: GoogleFonts.nunitoSans(
+                                fontSize: 15, fontWeight: FontWeight.w400
+                            )
+                        ),
                       ],
                     )
                   ],
@@ -191,16 +237,22 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                       Padding(
                         padding: const EdgeInsets.only(top: 15),
                         child: Text("Claim your spot now, booking will end in:",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500)),
+                            // style: TextStyle(
+                            //     color: Colors.white,
+                            //     fontSize: 17,
+                            //     fontWeight: FontWeight.w700),
+                            style: GoogleFonts.nunitoSans(
+                              color: Colors.white,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w700
+                            )
+                        ),
                       ),
                       Container(
                         // color: Colors.grey,
                         // width: double.infinity,
                         width: 300,
-                        height: 80,
+                        height: 90,
                         alignment: Alignment.center,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
@@ -210,31 +262,39 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                           itemBuilder: (context, index) {
                             return Padding(
                               padding:
-                                  const EdgeInsets.only(left: 10, right: 5, bottom: 10, top: 10),
+                                  const EdgeInsets.only(left: 10, right: 5, bottom: 5, top: 10),
                                   // const EdgeInsets.all(10),
                               child: Row(
                                 // mainAxisAlignment: MainAxisAlignment.center,  //Center Row contents horizontally,
                                 // crossAxisAlignment: CrossAxisAlignment.center , //Center Row contents vertically,
                                 children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        controller.itemDateUnites[index].value,
-                                        style: const TextStyle(
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 15),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          controller.itemDateUnites[index].value,
+                                          // style:  TextStyle(
+                                          //     color: Colors.white,
+                                          //     fontSize: 35,
+                                          //     fontWeight: FontWeight.w700),
+                                          style: GoogleFonts.oswald(
                                             color: Colors.white,
-                                            fontSize: 35,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                      Text(
-                                          controller.itemDateUnites[index].unit,
-                                          style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500)),
-                                    ],
+                                                fontSize: 30,
+                                                fontWeight: FontWeight.w400
+                                          ),
+                                        ),
+                                        Text(
+                                            controller.itemDateUnites[index].unit,
+                                            style: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 10,
+                                                fontWeight: FontWeight.w700)),
+                                      ],
+                                    ),
                                   ),
                                   const SizedBox(
                                     width: 10,
@@ -243,7 +303,7 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                                       ? Container(
                                           width: 0.8,
                                           color: Colors.white,
-                                          height: 72,
+                                          height: 65,
                                         )
                                       : Container()
                                 ],
@@ -259,10 +319,16 @@ class EventsCampsView extends BaseView<EventsCampsController> {
               Padding(
                 padding: const EdgeInsets.only(left: 15, top: 20),
                 child: Text("Coaches",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500)),
+                    // style: TextStyle(
+                    //     color: Colors.black,
+                    //     fontSize: 20,
+                    //     fontWeight: FontWeight.w700),
+                    style: GoogleFonts.nunitoSans(
+                      color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700
+                    )
+                ),
               ),
               Container(
                 padding: EdgeInsets.only(left: 20, right: 0),
@@ -321,10 +387,17 @@ class EventsCampsView extends BaseView<EventsCampsController> {
               Padding(
                 padding: const EdgeInsets.only(left: 15, top: 0, ),
                 child: Text("Description",
-                    style: TextStyle(
+                    // style: TextStyle(
+                    //     color: Colors.black,
+                    //     fontSize: 20,
+                    //     fontWeight: FontWeight.w700),
+
+                    style: GoogleFonts.nunitoSans(
                         color: Colors.black,
                         fontSize: 20,
-                        fontWeight: FontWeight.w500)),
+                        fontWeight: FontWeight.w700
+                    )
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15, top: 10),
@@ -335,10 +408,16 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                   trimMode: TrimMode.Line,
                   trimCollapsedText: 'read more',
                   trimExpandedText: 'read less',
-                  moreStyle: TextStyle(
+                  // moreStyle: TextStyle(
+                  //     fontSize: 10,
+                  //     fontWeight: FontWeight.w400,
+                  //     color: HexColor.fromHex("F47A23")),
+                    moreStyle: GoogleFonts.nunitoSans(
                       fontSize: 10,
-                      fontWeight: FontWeight.w400,
-                      color: HexColor.fromHex("F47A23")),
+                          fontWeight: FontWeight.w400,
+                          color: HexColor.fromHex("F47A23")
+                    )
+
                 ),),
 
               GalleryWidget(),
@@ -380,10 +459,14 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                           // ),
                           child: Text(
                             "Terms and conditions",
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: HexColor.fromHex("#FF6E01"),
-                            ),
+                            // style: TextStyle(
+                            //   fontSize: 20,
+                            //   color: HexColor.fromHex("#FF6E01"),
+                            // ),
+                              style: GoogleFonts.nunitoSans(
+                                fontSize: 15,
+                                color: HexColor.fromHex("#FF6E01"),
+                              )
                           ),
                         ),
                             DotWidget(
@@ -417,10 +500,15 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                           padding: const EdgeInsets.only(left: 8.0),
                           child: Text("price",
                               maxLines: 4, overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                // color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400)),
+                              // style: TextStyle(
+                              //     fontSize: 20,
+                              //     fontWeight: FontWeight.w400),
+                              style: GoogleFonts.nunitoSans(
+                                fontSize: 20,
+                                  fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.w400
+                              )
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 10, ),
@@ -439,10 +527,14 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                                 padding: const EdgeInsets.only(left: 8.0, top: 10),
                                 child: Text("EGP",
                                     maxLines: 4, overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      // color: Colors.white,
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.w400)),
+                                    // style: TextStyle(
+                                    //     fontSize: 10,
+                                    //     fontWeight: FontWeight.w400),
+                                    style: GoogleFonts.nunitoSans(
+                                      fontSize: 10,
+                                          fontWeight: FontWeight.w400
+                                    )
+                                ),
                               ),
                             ],
                           ),
@@ -452,7 +544,7 @@ class EventsCampsView extends BaseView<EventsCampsController> {
                     Spacer(),
                     OrangeRoundedButton(
                       width: 200,
-                      filled: true,title: "Count me in !",callback: () => {
+                      filled: true,title: "Count Me In !",callback: () => {
 
                     },),
                   ],
@@ -460,7 +552,7 @@ class EventsCampsView extends BaseView<EventsCampsController> {
               ),
 
 
-             OrangeRoundedButton(filled: true,title: "Count me in !",callback: () => {
+             OrangeRoundedButton(filled: true,title: "Count Me In !",callback: () => {
 
              },),
             ],

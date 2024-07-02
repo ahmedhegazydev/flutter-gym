@@ -37,6 +37,7 @@ dependencies:
   chewie: 1.4.0
   scroll_snap_list: ^0.9.1
 #  dotted_border: ^2.0.0+3
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:
